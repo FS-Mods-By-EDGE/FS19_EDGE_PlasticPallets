@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>$l10n_fillType_seeds</name>
+        <functions>
+            <function>$l10n_function_bigBagSeeds</function>
+        </functions>
+        <specs>
+            <capacity>2000</capacity>
+            <fillTypes>seeds</fillTypes>
+        </specs>
+        <image>$data/objects/pallets/pioneer/store_pioneerPallet.png</image>
+        <price>1890</price>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>EDGE</brand>
+        <category>pallets</category>
+        <financeCategory>PURCHASE_SEEDS</financeCategory>
+        <vertexBufferMemoryUsage>119360</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>18384</indexBufferMemoryUsage>
+        <textureMemoryUsage>2621584</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>data/PlasticPallet.i3d</filename>
+        <size width="2" length="2" />
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="50" />
+        </components>
+    </base>
+
+    <animations>
+        <animation name="seedBagAnimation">
+            <part node="seedBags41"  startTime="0.000" endTime="0.975" visibility="false" />
+            <part node="seedBags41"  startTime="0.976" endTime="1.000" visibility="true" />
+            <part node="seedBags42"  startTime="0.000" endTime="0.999" visibility="false" />
+            <part node="seedBags42"  startTime="1.000" endTime="1.000" visibility="true" />
+
+            <part node="tensionBeltNode"  startTime="0" endTime="1.000" startScale="1 0.1 1" endScale="1 1 1"/>
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="2000" startFillType="seeds" startFillLevel="2000" >
+                        <fillRootNode index="0>" />
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="seedBagAnimation" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dischargeable requiresTipOcclusionArea="false" />
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="200"/>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="tensionBeltNode"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="dynamicMountTrigger" node="0>0" />
+        <i3dMapping id="tensionBeltNode" node="0>1" />
+        <i3dMapping id="fillTrigger" node="0>2" />
+        <i3dMapping id="seedBags01" node="0>3|0" />
+        <i3dMapping id="seedBags02" node="0>3|1" />
+        <i3dMapping id="seedBags03" node="0>3|2" />
+        <i3dMapping id="seedBags04" node="0>3|3" />
+        <i3dMapping id="seedBags05" node="0>3|4" />
+        <i3dMapping id="seedBags06" node="0>3|5" />
+        <i3dMapping id="seedBags07" node="0>3|6" />
+        <i3dMapping id="seedBags08" node="0>3|7" />
+        <i3dMapping id="seedBags09" node="0>3|8" />
+        <i3dMapping id="seedBags10" node="0>3|9" />
+        <i3dMapping id="seedBags11" node="0>3|10" />
+        <i3dMapping id="seedBags12" node="0>3|11" />
+        <i3dMapping id="seedBags13" node="0>3|12" />
+        <i3dMapping id="seedBags14" node="0>3|13" />
+        <i3dMapping id="seedBags15" node="0>3|14" />
+        <i3dMapping id="seedBags16" node="0>3|15" />
+        <i3dMapping id="seedBags17" node="0>3|16" />
+        <i3dMapping id="seedBags18" node="0>3|17" />
+        <i3dMapping id="seedBags19" node="0>3|18" />
+        <i3dMapping id="seedBags20" node="0>3|19" />
+        <i3dMapping id="seedBags21" node="0>3|20" />
+        <i3dMapping id="seedBags22" node="0>3|21" />
+        <i3dMapping id="seedBags23" node="0>3|22" />
+        <i3dMapping id="seedBags24" node="0>3|23" />
+        <i3dMapping id="seedBags25" node="0>3|24" />
+        <i3dMapping id="seedBags26" node="0>3|25" />
+        <i3dMapping id="seedBags27" node="0>3|26" />
+        <i3dMapping id="seedBags28" node="0>3|27" />
+        <i3dMapping id="seedBags29" node="0>3|28" />
+        <i3dMapping id="seedBags30" node="0>3|29" />
+        <i3dMapping id="seedBags31" node="0>3|30" />
+        <i3dMapping id="seedBags32" node="0>3|31" />
+        <i3dMapping id="seedBags33" node="0>3|32" />
+        <i3dMapping id="seedBags34" node="0>3|33" />
+        <i3dMapping id="seedBags35" node="0>3|34" />
+        <i3dMapping id="seedBags36" node="0>3|35" />
+        <i3dMapping id="seedBags37" node="0>3|36" />
+        <i3dMapping id="seedBags38" node="0>3|37" />
+        <i3dMapping id="seedBags39" node="0>3|38" />
+        <i3dMapping id="seedBags40" node="0>3|39" />
+        <i3dMapping id="seedBags41" node="0>3|40" />
+        <i3dMapping id="seedBags42" node="0>3|41" />
+    </i3dMappings>
+</vehicle>

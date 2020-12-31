@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="tmrStation" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="8" filename="../../FS19_EDGE_BuyingStations/data/textures/EDGE_Decal_diffuse.dds"/>
+    <File fileId="9" filename="../../FS19_EDGE_BuyingStations/data/textures/EDGE_Decal_normal.dds"/>
+    <File fileId="10" filename="../../FS19_EDGE_BuyingStations/data/textures/EDGE_Decal_specular.dds"/>
+    <File fileId="1" filename="../../FS19_EDGE_BuyingStations/data/textures/plasticBox_diffuse.dds"/>
+    <File fileId="5" filename="$data/fillPlanes/forage_diffuse.dds"/>
+    <File fileId="6" filename="$data/fillPlanes/forage_normal.dds"/>
+    <File fileId="7" filename="$data/fillPlanes/forage_specular.dds"/>
+    <File fileId="2" filename="$data/maps/textures/european/props/plasticBox_normal.png"/>
+    <File fileId="3" filename="$data/maps/textures/european/props/plasticBox_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="buyingStation" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="EDGE_decals_mat" materialId="14">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="fillPlane_mat" materialId="20">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="plasticBox01_mat" materialId="31">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="PlasticPallet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="plasticBox" clipDistance="300" nodeId="221" materialIds="31" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="col" translation="0 1.23286e-05 0" static="true" density="0.0001" nodeId="222" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="3" name="fillPlane" translation="0 0.496697 0" nodeId="223" materialIds="20" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="decals" nodeId="233">
+        <Shape shapeId="4" name="sign" clipDistance="300" nodeId="234" materialIds="14" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="5" name="logo" clipDistance="300" nodeId="235" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="6" name="banner" clipDistance="300" nodeId="236" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="sign" clipDistance="300" nodeId="275" materialIds="14" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="8" name="logo" clipDistance="300" nodeId="276" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="9" name="banner" clipDistance="300" nodeId="277" materialIds="14" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="gameplay" translation="-0.423617 -0.192127 1.67211" nodeId="125">
+        <TransformGroup name="OUT" nodeId="126">
+          <TransformGroup name="loadingStation" nodeId="127">
+            <TransformGroup name="loadingTriggers" nodeId="128">
+              <Shape shapeId="10" name="loadingTrigger" translation="0 -0.191 2.594" static="true" trigger="true" collisionMask="1088421888" nodeId="129" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+              <TransformGroup name="dischargeEffect" translation="0 5.40493 0" nodeId="130">
+                <Shape shapeId="11" name="pipeEffectSmoke" translation="0 -6.18552 2.50694" visibility="false" clipDistance="100" nodeId="131" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="storage" nodeId="132"/>
+        <TransformGroup name="mapPosition" translation="5.5 0 0" nodeId="133"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>
